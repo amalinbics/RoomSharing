@@ -25,6 +25,8 @@ namespace RoomSharing.Models
         {
         }
 
+        public DbSet<Group> Groups { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

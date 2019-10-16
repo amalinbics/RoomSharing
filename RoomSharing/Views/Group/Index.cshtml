@@ -1,0 +1,38 @@
+﻿@using RoomSharing.Models
+@model IEnumerable<Group>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<hr />
+
+@Html.ActionLink("Create", "Create", null, new { @class = "btn btn-primary" })
+
+<br />
+<br />
+
+@if (Model != null)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>
+                    Name
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+ss
